@@ -17,13 +17,12 @@ public class ReverseCStyle {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         String str = Generator.getSaltString();
-        str += '\0';
-        System.out.println("new str " + str + "********");
         System.out.println("C style string to reverse: " + str);
         reverse(str);
     }
 
     private static String reverse(String str) {
+        str += '\0';
         int length = str.length();
         char[] chars = new char[length];
         int j = 0;
