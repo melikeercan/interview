@@ -21,6 +21,9 @@ public class CheckIfStringUnique {
         System.out.println("Check if string is unique: " + str);
         boolean unique = isUnique(str);
         System.out.println(unique);
+
+        boolean isUnique = checkForUnique(str);
+        System.out.println(isUnique);
     }
 
     private static boolean isUnique(String str) {
@@ -62,5 +65,19 @@ public class CheckIfStringUnique {
         }
         String saltStr = salt.toString();
         return saltStr;
+    }
+
+    public static boolean checkForUnique(String str) {
+        boolean hasUnique = false;
+
+        for (char c : str.toCharArray()) {
+            if (str.indexOf(c) == str.lastIndexOf(c)) {
+                hasUnique = true;
+            } else {
+                hasUnique = false;
+            }
+        }
+
+        return hasUnique;
     }
 }
