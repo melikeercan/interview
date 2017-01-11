@@ -27,7 +27,7 @@ public class CheckIfStringUniqueWithDataStructures {
         }
         HashMap<String, String> hmap = new HashMap<String, String>();
         for (char c : str.toCharArray()) {
-            String cStr = "" + c;
+            String cStr = String.valueOf(c);
             String obj = hmap.get(cStr);
             if (obj == null) {
                 hmap.put(cStr, cStr);
