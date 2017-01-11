@@ -1,12 +1,12 @@
 /**
  *
  */
-package com.interview.arraysandstrings;
+package com.interview.arraysandstrings.uniqueString;
 
 import java.util.HashMap;
-import java.util.Random;
 
 import com.google.common.base.Strings;
+import com.interview.utils.Generator;
 
 /**
  * @author MelikeErcan
@@ -17,7 +17,7 @@ public class CheckIfStringUniqueWithDataStructures {
      * @param args
      */
     public static void main(String[] args) {
-        String str = getSaltString();
+        String str = Generator.getSaltString();
         System.out.println("Check if string is unique: " + str);
         boolean isUnique = isUnique(str);
         System.out.println(isUnique);
@@ -38,15 +38,4 @@ public class CheckIfStringUniqueWithDataStructures {
         return true;
     }
 
-    protected static String getSaltString() {
-        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        StringBuilder salt = new StringBuilder();
-        Random rnd = new Random();
-        while (salt.length() < 18) {
-            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-            salt.append(SALTCHARS.charAt(index));
-        }
-        String saltStr = salt.toString();
-        return saltStr;
-    }
 }

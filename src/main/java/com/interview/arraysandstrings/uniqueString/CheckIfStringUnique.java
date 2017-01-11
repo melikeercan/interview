@@ -1,11 +1,11 @@
 /**
  *
  */
-package com.interview.arraysandstrings;
-
-import java.util.Random;
+package com.interview.arraysandstrings.uniqueString;
 
 import org.apache.commons.lang3.StringUtils;
+
+import com.interview.utils.Generator;
 
 /**
  * @author MelikeErcan
@@ -17,7 +17,7 @@ public class CheckIfStringUnique {
      * @param args
      */
     public static void main(String[] args) {
-        String str = getSaltString();
+        String str = Generator.getSaltString();
         System.out.println("Check if string is unique: " + str);
         boolean unique = isUnique(str);
         System.out.println(unique);
@@ -53,18 +53,6 @@ public class CheckIfStringUnique {
             }
         }
         return isFound(beginning.substring(0, beginning.length() - 1), beginning.substring(beginning.length() - 1));
-    }
-
-    protected static String getSaltString() {
-        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        StringBuilder salt = new StringBuilder();
-        Random rnd = new Random();
-        while (salt.length() < 18) {
-            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-            salt.append(SALTCHARS.charAt(index));
-        }
-        String saltStr = salt.toString();
-        return saltStr;
     }
 
     public static boolean checkForUnique(String str) {
