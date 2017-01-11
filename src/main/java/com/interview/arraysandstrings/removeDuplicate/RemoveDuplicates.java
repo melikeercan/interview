@@ -35,7 +35,7 @@ public class RemoveDuplicates {
 
     }
 
-    private static String removeDuplicates(String str) {
+    public static String removeDuplicates(String str) {
         if (StringUtils.isEmpty(str)) {
             return str;
         }
@@ -48,7 +48,7 @@ public class RemoveDuplicates {
         return str;
     }
 
-    private static String removeDuplicatesWithReplace(String str) {
+    public static String removeDuplicatesWithReplace(String str) {
         for (char c : str.toCharArray()) {
             int cIndex = str.indexOf(c);
             if (cIndex != str.lastIndexOf(c)) {
@@ -59,7 +59,7 @@ public class RemoveDuplicates {
         return str;
     }
 
-    private static String removeDuplicatesWithBoolean(String str) {
+    public static String removeDuplicatesWithBoolean(String str) {
         if (StringUtils.isEmpty(str) || str.length() < 2) {
             return str;
         }
