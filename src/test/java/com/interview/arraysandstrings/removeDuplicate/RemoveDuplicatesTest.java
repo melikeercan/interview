@@ -33,5 +33,4 @@ public class RemoveDuplicatesTest {
         assert (strDuplicate1Result.equals("ab"));
         assert (strDuplicate2Result.equals("abc"));
     }
-
 }
