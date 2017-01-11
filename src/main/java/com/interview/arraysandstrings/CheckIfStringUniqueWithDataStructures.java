@@ -25,12 +25,10 @@ public class CheckIfStringUniqueWithDataStructures {
         if (str == null) {
             return true;
         }
-        HashMap<String, String> hmap = new HashMap<String, String>();
+        HashMap<Character, Integer> hmap = new HashMap<Character, Integer>();
         for (char c : str.toCharArray()) {
-            String cStr = String.valueOf(c);
-            String obj = hmap.get(cStr);
-            if (obj == null) {
-                hmap.put(cStr, cStr);
+            if (hmap.get(c) == null) {
+                hmap.put(c, 1);
             } else {
                 return false;
             }
