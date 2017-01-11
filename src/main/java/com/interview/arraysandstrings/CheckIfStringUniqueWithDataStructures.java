@@ -6,6 +6,8 @@ package com.interview.arraysandstrings;
 import java.util.HashMap;
 import java.util.Random;
 
+import com.google.common.base.Strings;
+
 /**
  * @author MelikeErcan
  *
@@ -22,7 +24,7 @@ public class CheckIfStringUniqueWithDataStructures {
     }
 
     private static boolean isUnique(String str) {
-        if (str == null) {
+        if (Strings.isNullOrEmpty(str)) {
             return true;
         }
         HashMap<Character, Integer> hmap = new HashMap<Character, Integer>();
