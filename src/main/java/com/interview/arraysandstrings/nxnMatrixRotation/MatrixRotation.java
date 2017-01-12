@@ -75,7 +75,7 @@ public class MatrixRotation {
             }
             System.out.println("bottom: " + Arrays.toString(bottom));
 
-            //TODO BOTTOM TO LEFT
+            //OK BOTTOM TO LEFT
             
             for (int j = 0; j < width; j++) {
             	matrixFinal[j+i][i] = bottom[j];
@@ -98,7 +98,6 @@ public class MatrixRotation {
             }
 
         }
-        System.out.println(",,,,,,,,,,,,,,,,,");
         for (int i = 0; i < n; i++) {
         	System.out.println(Arrays.toString(matrixFinal[i]));
         }
@@ -115,10 +114,7 @@ public class MatrixRotation {
         }
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-
-                System.out.println(i + " " + j + " " + matrix[i][j]);
-            }
+            System.out.println(Arrays.toString(matrix[i]));
         }
         System.out.println("******");
         return matrix;
