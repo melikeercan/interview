@@ -19,6 +19,11 @@ public class MatrixRotation {
         int[][] matrixInitial = initMatrix(n);
         int[][] matrixFinal = rotate(matrixInitial, n);
         System.out.println(matrixFinal.length);
+        
+        int m = 4;
+        int[][] matrixInitial2 = initMatrix(m);
+        int[][] matrixFinal2 = rotate(matrixInitial2, m);
+        System.out.println(matrixFinal2.length);
     }
 
     private static int[][] rotate(int[][] matrixInitial, int n) {
