@@ -3,9 +3,7 @@
  */
 package com.interview.arraysandstrings.subString;
 
-import org.apache.commons.lang3.StringUtils;
 
-import com.interview.utils.Generator;
 
 /**
  * @author MelikeErcan
