@@ -89,41 +89,4 @@ public class treeWithMinimumHeight {
         return n;
     }
 
-    public static int minimumDepth(TreeNode node) {
-        if (node == null) {
-            return 0;
-        }
-        if (node.getLeft() == null && node.getRight() == null) {
-            return 1;
-        }
-        if (node.getLeft() == null) {
-            return minimumDepth(node.getRight()) + 1;
-        }
-
-        if (node.getRight() == null)
-            return minimumDepth(node.getLeft()) + 1;
-
-        return Math.min(minimumDepth(node.getLeft()), minimumDepth(node.getRight())) + 1;
-    }
-
-    public static int height(TreeNode node) {
-        if (node == null) {
-            return 0;
-        }
-        int lheight = height(node.getLeft());
-        int rheight = height(node.getRight());
-        if (lheight > rheight) {
-            return (lheight + 1);
-        } else {
-            return (rheight + 1);
-        }
-    }
-
-    public static int maxDepth(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        return 1 + Math.max(maxDepth(root.getLeft()), maxDepth(root.getRight()));
-    }
-
 }
