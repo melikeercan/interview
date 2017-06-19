@@ -1,4 +1,4 @@
-package com.interview.treesandgraphs.balanced;
+package com.interview.treesandgraphs.binaryTreeMinimumHeight;
 
 public class TreeNode {
 
@@ -7,8 +7,6 @@ public class TreeNode {
     private TreeNode left;
 
     private TreeNode right;
-
-    private int size = 0;
 
     public TreeNode(int value) {
         this.value = value;
@@ -38,11 +36,4 @@ public class TreeNode {
         this.right = right;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
 }
