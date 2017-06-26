@@ -58,11 +58,11 @@ public class treeWithMinimumHeight {
 
     private static void addNode(TreeNode parent, TreeNode left, TreeNode right, int limit) {
         if (left == null) {
+            parent.setLeft(new TreeNode(arrs2[rootSize]));
             rootSize++;
-            parent.setLeft(new TreeNode(arrs2[rootSize - 1]));
         } else if (right == null) {
+            parent.setRight(new TreeNode(arrs2[rootSize]));
             rootSize++;
-            parent.setRight(new TreeNode(arrs2[rootSize - 1]));
         } else {
             TreeNode leftLeft = left.getLeft();
             TreeNode leftRight = left.getRight();
